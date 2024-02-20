@@ -1,0 +1,14 @@
+@import "./utils.pcss";
+@import "./colors.pcss";
+@import "mixins.pcss";
+@import "./ui/index.pcss";
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

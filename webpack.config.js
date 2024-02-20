@@ -1,4 +1,4 @@
-const { resolve } = require("path")
+const { resolve } = require('path')
 
 module.exports = () => {
 	return {
@@ -12,7 +12,7 @@ module.exports = () => {
 		output: {
 			path: getPathTo('build'),
 			filename: '[name].js',
-			libraryTarget: "umd",
+			libraryTarget: 'umd',
 			clean: true
 		},
 		resolve: {
@@ -29,11 +29,11 @@ module.exports = () => {
 					loader: 'ts-loader'
 				},
 				{
-					test: /\.(pcss)$/,
+					test: /\.pcss$/,
 					use: [ 'style-loader', 'css-loader', 'postcss-loader' ]
 				}
 			]
-		},
+		}
 	}
 }
 

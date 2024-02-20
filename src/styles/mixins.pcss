@@ -1,0 +1,117 @@
+@define-mixin h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 400;
+}
+
+@define-mixin h2 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  font-weight: 400;
+}
+
+@define-mixin h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 400;
+}
+
+@define-mixin h4 {
+  font-size: 2.75rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
+
+@define-mixin h5 {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+@define-mixin h6 {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+@define-mixin text-l {
+  @mixin h5;
+}
+
+@define-mixin text-m {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+@define-mixin text-s {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+@define-mixin nfc {
+  &:not(:first-child) {
+    @mixin-content;
+  }
+}
+
+@define-mixin nlc {
+  &:not(:last-child) {
+    @mixin-content;
+  }
+}
+
+@define-mixin nfcnlc {
+  &:not(:first-child):not(:last-child) {
+    @mixin-content;
+  }
+}
+
+@define-mixin fc {
+  &:first-child {
+    @mixin-content;
+  }
+}
+
+@define-mixin lc {
+  &:last-child {
+    @mixin-content;
+  }
+}
+
+@define-mixin fclc {
+  &:first-child,
+  &:last-child {
+    @mixin-content;
+  }
+}
+
+@define-mixin only {
+  &:only-child {
+    @mixin-content;
+  }
+}
+
+@define-mixin child $number {
+  &:nth-child($(number)) {
+    @mixin-content;
+  }
+}
+
+@define-mixin last-children $number {
+  &:nth-last-child(-n + $(number)) {
+    @mixin-content;
+  }
+}
+
+@define-mixin first-children $number {
+  &:nth-child(-n + $(number)) {
+    @mixin-content;
+  }
+}
+
+@define-mixin transition $prop {
+  transition: $prop var(--transitionDuration, 1s)
+  var(--transitionTimingFunc, ease);
+}
