@@ -1,11 +1,11 @@
 {
   "name": "saltcarrot-ui-kit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./build/index.js",
   "scripts": {
     "build": "webpack",
-    "publish": "webpack && npm version patch && npm publish",
+    "publish": "npm version patch && npm publish",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
