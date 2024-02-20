@@ -1,0 +1,47 @@
+{
+  "name": "saltcarrot-ui-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.7",
+    "@types/webpack-env": "^1.18.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.25",
+    "postcss-import": "^15.1.0",
+    "postcss-loader": "^7.3.3",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.3.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "postcss": "*",
+    "postcss-import": "*",
+    "postcss-loader": "*",
+    "postcss-mixins": "*",
+    "postcss-nested": "*",
+    "postcss-preset-env": "*"
+  },
+  "files": [
+    "build"
+  ]
+}

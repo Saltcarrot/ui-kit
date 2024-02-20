@@ -1,0 +1,1 @@
+export { useCN } from './useCN'

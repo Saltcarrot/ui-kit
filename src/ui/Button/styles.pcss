@@ -1,0 +1,98 @@
+.button {
+  &--isColor {
+    &Primary {
+      background-color: var(--buttonPrimaryBGColor);
+      color: var(--buttonPrimaryTextColor);
+
+      &:not(.button--isTransparent) {
+        &:hover {
+          background-color: var(--buttonPrimaryHoverBGColor);
+        }
+
+        &:active,
+        &:focus {
+          background-color: var(--buttonPrimaryActiveBGColor);
+        }
+
+        &:disabled {
+          background-color: var(--buttonPrimaryDisabledBGColor);
+        }
+      }
+
+      &.button--isTransparent {
+        background-color: transparent;
+        color: var(--buttonPrimaryBGColor);
+
+        &:hover {
+          background-color: var(--buttonPrimaryTransparentHoverBGColor);
+        }
+
+        &:active,
+        &:focus {
+          background-color: var(--colorPrimaryTransparentFocus);
+        }
+
+        &:disabled {
+          background-color: transparent;
+          color: var(--buttonPrimaryDisabledBGColor);
+        }
+      }
+    }
+
+    &Secondary {
+      background-color: var(--buttonSecondaryBGColor);
+      color: var(--buttonSecondaryTextColor);
+
+      &:not(.button--isTransparent) {
+        &:hover {
+          background-color: var(--buttonSecondaryHoverBGColor);
+        }
+
+        &:active,
+        &:focus {
+          background-color: var(--buttonSecondaryActiveBGColor);
+        }
+
+        &:disabled {
+          background-color: var(--buttonSecondaryDisabledBGColor);
+        }
+      }
+
+      &.button--isTransparent {
+        background-color: transparent;
+        color: var(--buttonSecondaryBGColor);
+
+        &:hover {
+          background-color: var(--buttonSecondaryTransparentHoverBGColor);
+        }
+
+        &:active,
+        &:focus {
+          background-color: var(--colorSecondaryTransparentFocus);
+        }
+
+        &:disabled {
+          background-color: transparent;
+          color: var(--buttonSecondaryDisabledBGColor);
+        }
+      }
+    }
+  }
+
+  &--isSize {
+    &Small {
+      padding: var(--buttonSmallPaddingY) var(--buttonSmallPaddingX);
+      border-radius: var(--buttonSmallBorderRadius);
+    }
+
+    &Medium {
+      padding: var(--buttonMediumPaddingY) var(--buttonMediumPaddingX);
+      border-radius: var(--buttonMediumBorderRadius);
+    }
+
+    &Large {
+      padding: var(--buttonLargePaddingY) var(--buttonLargePaddingX);
+      border-radius: var(--buttonLargeBorderRadius);
+    }
+  }
+}
