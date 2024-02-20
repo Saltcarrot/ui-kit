@@ -3,6 +3,34 @@
 @import "mixins.pcss";
 @import "./ui/index.pcss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  @mixin text-m;
+  background-color: var(--colorBackground);
+}
+
 button {
   outline: none;
   border: none;
@@ -11,4 +39,20 @@ button {
   &:disabled {
     cursor: not-allowed;
   }
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
 }

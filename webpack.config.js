@@ -7,7 +7,7 @@ module.exports = () => {
 			'index': getPathTo('src/index.ts'),
 			'config': getPathTo('src/config/index.ts'),
 			'lib': getPathTo('src/lib/index.ts'),
-			'ui': getPathTo('src/ui/index.ts')
+			'components': getPathTo('src/components/index.ts')
 		},
 		output: {
 			path: getPathTo('build'),
