@@ -8,6 +8,7 @@ export interface IButtonComponent {
 	size?: TSizes
 	type?: TButtons
 	form?: string
+	icon?: string
 	isDisabled?: boolean
 	onClick?: () => void
 }

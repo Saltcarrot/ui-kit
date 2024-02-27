@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  align-items: center;
   transition: background-color var(--transitionDuration, 1s) var(--transitionTimingFunc, ease);
 
   &--isColor {
@@ -83,18 +85,81 @@
 
   &--isSize {
     &Small {
+      gap: var(--buttonSmallGap);
       padding: var(--buttonSmallPaddingY) var(--buttonSmallPaddingX);
       border-radius: var(--buttonSmallBorderRadius);
+
+      &.button {
+        &--isRounded {
+          border-radius: calc(var(--buttonSmallPaddingY) + var(--buttonSmallFontSize));
+        }
+
+        &--isOnlyIcon {
+          padding: var(--buttonSmallOnlyIconPadding);
+        }
+      }
     }
 
     &Medium {
+      gap: var(--buttonMediumGap);
       padding: var(--buttonMediumPaddingY) var(--buttonMediumPaddingX);
       border-radius: var(--buttonMediumBorderRadius);
+
+      &.button {
+        &--isRounded {
+          border-radius: calc(var(--buttonMediumPaddingY) + var(--buttonMediumFontSize));
+        }
+
+        &--isOnlyIcon {
+          padding: var(--buttonMediumOnlyIconPadding);
+        }
+      }
     }
 
     &Large {
+      gap: var(--buttonLargeGap);
       padding: var(--buttonLargePaddingY) var(--buttonLargePaddingX);
       border-radius: var(--buttonLargeBorderRadius);
+
+      &.button {
+        &--isRounded {
+          border-radius: calc(var(--buttonLargePaddingY) + var(--buttonLargeFontSize));
+        }
+
+        &--isOnlyIcon {
+          padding: var(--buttonLargeOnlyIconPadding);
+        }
+      }
+    }
+  }
+
+  &--isOnlyIcon.button--isRounded {
+    border-radius: 50%;
+  }
+
+  &--isLTR {
+    flex-direction: row-reverse;
+  }
+
+  &__label {
+    &--isSize {
+      &Small {
+        font-size: var(--buttonSmallFontSize);
+        line-height: var(--buttonSmallLineHeight);
+        font-weight: var(--buttonSmallFontWeight);
+      }
+
+      &Medium {
+        font-size: var(--buttonMediumFontSize);
+        line-height: var(--buttonMediumLineHeight);
+        font-weight: var(--buttonMediumFontWeight);
+      }
+
+      &Large {
+        font-size: var(--buttonLargeFontSize);
+        line-height: var(--buttonLargeLineHeight);
+        font-weight: var(--buttonLargeFontWeight);
+      }
     }
   }
 }

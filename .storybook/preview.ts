@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 
-import '../src/styles/global.pcss'
+import '../src/assets/styles/global.pcss'
+import '../src/assets/sprites/icons-sprite.svg'
 
 const preview: Preview = {
   parameters: {

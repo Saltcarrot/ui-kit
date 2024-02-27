@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
 		"outDir": "./build/",
-		"target": "es6",
-		"module": "esnext",
+		"target": "ES6",
+		"module": "ESNext",
 		"jsx": "react-jsx",
 		"esModuleInterop": true,
 		"lib": [ "es2015", "dom" ],

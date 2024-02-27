@@ -1,20 +1,22 @@
 import { FC } from 'react'
 import { defaultProps, IButtonComponent } from '../config'
 import { getStringWithUppercaseFirstChar, useCN } from '../../../lib'
+import { Icon } from '../../Icon'
 
 import '../styles.pcss'
 
 /**
  * Компонент кнопки
- * @param extraClasses{IExtraClasses} - классы для доп. кастомизации
- * @param size{String} - размер кнопки
- * @param title{String} - подсказка при наведении
- * @param label{String} - текст кнопки
- * @param theme{String} - цвет кнопки
- * @param isDisabled{Boolean} - флаг блокировки кнопки
- * @param type{String} - тип кнопки
- * @param form{String} - идентификатор формы, к которой привязана кнопка
- * @param onClick{Function} - действие при клике
+ * @param extraClasses{IExtraClasses} - классы для дополнительной кастомизации;
+ * @param size{String} - размер;
+ * @param title{String} - подсказка при наведении;
+ * @param label{String} - текст;
+ * @param theme{String} - цвет;
+ * @param isDisabled{Boolean} - флаг блокировки;
+ * @param type{String} - тип;
+ * @param form{String} - `id` формы, к которой привязана кнопка;
+ * @param icon{String} - имя иконки;
+ * @param onClick{Function} - действие при клике.
  * @return {JSX.Element}
  * */
 export const Button: FC<IButtonComponent> = ({
@@ -25,6 +27,7 @@ export const Button: FC<IButtonComponent> = ({
 	size,
 	type,
 	form,
+	icon,
 	isDisabled,
 	onClick
 }) => {
@@ -39,7 +42,8 @@ export const Button: FC<IButtonComponent> = ({
 			className={ getCN('', {
 				...extraClasses,
 				[`isColor${getStringWithUppercaseFirstChar(theme)}`]: true,
-				[`isSize${getStringWithUppercaseFirstChar(size)}`]: true
+				[`isSize${getStringWithUppercaseFirstChar(size)}`]: true,
+				isOnlyIcon: !!icon && !label
 			}) }
 			title={ title }
 			type={ type }
@@ -48,8 +52,11 @@ export const Button: FC<IButtonComponent> = ({
 			onClick={ handleClick }
 		>
 			{ !!label && (
-				<span className={ getCN('label') }>{ label }</span>
+				<span className={ getCN('label', {
+					[`isSize${getStringWithUppercaseFirstChar(size)}`]: true
+				}) }>{ label }</span>
 			) }
+			{ !!icon && <Icon size={ size } name={ icon } /> }
 		</button>
 	)
 }

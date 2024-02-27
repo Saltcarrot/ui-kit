@@ -3,7 +3,12 @@ module.exports = {
 		'browser': true,
 		'es2021': true
 	},
-	'extends': ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:storybook/recommended'],
+	'extends': [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:react/recommended',
+		'plugin:storybook/recommended'
+	],
 	'overrides': [
 		{
 			'env': {
@@ -94,7 +99,8 @@ module.exports = {
 		],
 		'no-multiple-empty-lines': [
 			'warn',
-			{ 'max': 1, 'maxBOF': 0,
+			{
+				'max': 1, 'maxBOF': 0,
 				'maxEOF': 0
 			}
 		],
@@ -107,5 +113,9 @@ module.exports = {
 			}
 		],
 		'react/react-in-jsx-scope': 'off'
+	},
+	'globals': {
+		'module': true,
+		'__dirname': true
 	}
 }

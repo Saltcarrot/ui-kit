@@ -4,7 +4,6 @@ module.exports = () => {
 	return {
 		mode: 'production',
 		entry: {
-			'index': getPathTo('src/index.ts'),
 			'config': getPathTo('src/config/index.ts'),
 			'lib': getPathTo('src/lib/index.ts'),
 			'components': getPathTo('src/components/index.ts')

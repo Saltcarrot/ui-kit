@@ -20,6 +20,7 @@ const config: StorybookConfig = {
       },
     },
   },
+  staticDirs: [ '../src' ],
   swc: () => ({
     jsc: {
       transform: {
@@ -33,22 +34,31 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal: config => {
-    config.module.rules.push({
-      test: /\.pcss$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        {
-          loader: 'postcss-loader',
-          options: {
-            implementation: require('postcss'),
-            postcssOptions: {
-              config: resolve(__dirname, '../postcss.config.js'),
+    config.module.rules.push(
+      {
+        test: /\.pcss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              implementation: require('postcss'),
+              postcssOptions: {
+                config: resolve(__dirname, '../postcss.config.js'),
+              },
             },
-          },
+          }
+        ]
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/sprites/[name][ext]'
         }
-      ]
-    })
+      }
+    )
 
     return config
   }

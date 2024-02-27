@@ -1,13 +1,14 @@
 import { IButtonComponent } from './interface'
 
 export const defaultProps: IButtonComponent = {
-	extraClasses: null,
+	extraClasses: undefined,
 	label: '',
-	title: '',
+	title: undefined,
 	theme: 'primary',
 	size: 'medium',
 	type: 'button',
-	form: '',
+	form: undefined,
+	icon: undefined,
 	isDisabled: false,
-	onClick: null
+	onClick: undefined
 }

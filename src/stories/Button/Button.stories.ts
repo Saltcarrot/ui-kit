@@ -1,29 +1,31 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from '../../components'
+import { argTypes } from './argTypes'
 
 const meta = {
-	title: 'Button',
+	title: 'Components/Button',
 	component: Button,
 	parameters: {
 		layout: 'centered'
 	},
-	tags: [ 'autodocs' ]
+	tags: [ 'autodocs' ],
+	argTypes
 } satisfies Meta<typeof Button>
 
 export default meta
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Playground: Story = {
 	args: {
-		extraClasses: null,
+		extraClasses: undefined,
 		label: 'Button',
-		title: '',
+		title: undefined,
 		theme: 'primary',
 		size: 'medium',
 		type: 'button',
-		form: '',
-		onClick: null,
+		form: undefined,
+		onClick: undefined,
 		isDisabled: false
 	}
 }
