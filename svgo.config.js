@@ -8,6 +8,12 @@ module.exports = {
 					removeViewBox: false
 				}
 			}
+		},
+		{
+			name: 'removeAttrs',
+			params: {
+				attrs: '(fill)'
+			}
 		}
 	]
 }
